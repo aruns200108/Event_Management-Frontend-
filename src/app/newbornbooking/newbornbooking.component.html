@@ -1,0 +1,171 @@
+
+<app-navbar></app-navbar>
+<div class="container mt-5">
+  <div class="row text-center">
+
+    <h2 class="mt-5 fs-1" style="font-family: Gill Sans Extrabold sans-serif;">
+      Corporate Event
+    </h2>
+
+  </div>
+  <div class=" mt-5">
+    <p>This is Dummy Data: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus sed similique nesciunt
+      quia fuga. Qui numquam nisi cum atque deserunt, mollitia, magni impedit beatae eaque commodi dolore iure harum
+      ipsam Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi recusandae cum doloremque, repudiandae dolor
+      modi velit fuga ipsa consequatur optio saepe voluptas, asperiores facere tenetur? Illum, corrupti. Aliquid,
+      reprehenderit rerum!</p>
+  </div>
+
+
+  <div class="container mt-1">
+
+    <div class="row mt-1">
+      <div class="content text-center mt-1">
+        <h4 class="mt-4 text-center" style="font-family: Gill Sans Extrabold sans-serif; ">
+          For Booking
+        </h4>
+
+      </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container mt-5 ">
+      <div class="row">
+        <form [formGroup]="newbornBookForm" class="border rounded p-5" style="background-color: rgb(36, 34, 34);">
+
+          <!-- <h3 class="text-center">NewBorn Baby Shoot</h3> -->
+          <!-- <h5 class="text-center">Baby Name:</h5> -->
+          <!-- <div class="input-boxes  d-flex mt-4">
+            <div class="col-auto">
+              <label style="margin-left: 10rem;">BabyName:</label>
+            </div>
+            <div class="input-box col-auto" id="baby">
+              <input style="border:none;background-color:rgb(188, 185, 185) ;" type="text" placeholder="Enter your name"
+                required name="babyname" formControlName="babyname">
+            </div>
+          </div> -->
+
+          <div class=" mt-4 mb-5 text-white">
+            <!-- name -->
+            <div class="col-auto">
+              <label>Name:</label>
+            </div>
+            <div class="col-auto w-100">
+              <input type="text" class="form-control" name="username" formControlName="username" required>
+            </div>
+            <!-- number -->
+            <div class="col-auto mt-2">
+              <label>Number:</label>
+            </div>
+            <div class="col-auto mt-2 w-100">
+              <input type="text" class="form-control" name="mobile" formControlName="mobile">
+            </div>
+            <div *ngIf="newbornBookForm.get('mobile')?.errors &&  this.newbornBookForm.get('mobile')?.touched"
+              class="text-danger " style="margin-left:8rem ;">Please Enter Valid Phone Number</div>
+            <!-- email -->
+            <div class="col-auto mt-2">
+              <label>Email:</label>
+            </div>
+            <div class="col-auto mt-2 w-100">
+              <input type="text" class="form-control" name="email" formControlName="email">
+            </div>
+            <div *ngIf="newbornBookForm.get('email')?.errors &&  this.newbornBookForm.get('email')?.touched"
+              class="text-danger " style="margin-left:8rem ;">Please Enter Valid MailId</div>
+            <!-- address -->
+            <div class="col-auto mt-2">
+              <label>Address:</label>
+            </div>
+            <div class="col-auto mt-2 w-100">
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="2" name="address"
+                formControlName="address" required></textarea>
+            </div>
+            <!-- date of event -->
+            <div class="col-auto mt-2">
+              <label>Date of Event:</label>
+            </div>
+            <div class="col-auto mt-2 w-100">
+              <input type="date" class="form-control" name="doe" formControlName="doe">
+            </div>
+            <div *ngIf="newbornBookForm.get('doe')?.errors &&  this.newbornBookForm.get('doe')?.touched"
+              class="text-danger " style="margin-left:8rem ;">Date of Event is Required</div>
+
+            <!-- event -->
+            <label class="mt-3">Event:</label>
+
+            <div class="col-auto  w-100">
+              <select class="form-control" name="event" formControlName="event">
+                <option selected hidden disabled value="">Select a Event</option>
+                <option value="Product Launches">Product Launches</option>
+                <option value="Conferences">Conferences</option>
+                <option value="Sales Event">Sales Event</option>
+                <option value="Trade Show">Trade Show</option>
+                <option value="Customer Appreciation Party">Customer Appreciation Party</option>
+                <option value="Team Building Workshops">Team Building Workshops</option>
+               
+
+                <!-- <option value="Black Forset Cake">Black Forset Cake</option> -->
+              </select>
+            </div>
+            <div *ngIf="newbornBookForm.get('event')?.errors &&  this.newbornBookForm.get('event')?.touched"
+              class="text-danger mt-2" style="margin-left:8rem ;">Event is Required</div>
+
+
+            <!-- place -->
+            <div class="mt-3 row">
+              <span>Place :</span>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <label>
+                <input type="radio" name="place" formControlName="place" value="Indoor">
+                Indoor
+              </label>
+              &nbsp;&nbsp;
+              <label>
+                <input type="radio" name="place" formControlName="place" value="Outdoor">
+                Outdoor
+              </label>
+              &nbsp;&nbsp;
+
+            </div>
+            <div *ngIf="newbornBookForm.get('place')?.errors &&  this.newbornBookForm.get('place')?.touched"
+              class="text-danger " style="margin-left:8rem ;">Place is Required</div>
+            <!-- package -->
+            <div class="col-auto mt-2 ">
+              <label>Package:</label>
+            </div>
+            <div class="col-auto mt-2 w-100">
+              <input type="text" class="form-control" placeholder="Premium  or  Economy" name="packag" formControlName="packag">
+            </div>
+       
+
+            <div *ngIf="newbornBookForm.get('packag')?.errors &&  this.newbornBookForm.get('packag')?.touched"
+              class="text-danger " style="margin-left:8rem ;">Package is Required</div>
+          </div>
+          <div class="btn btn-warning  d-flex text-center justify-content-center" (click)="newbornBook()">BOOK</div>
+
+        </form>
+
+      </div>
+    </div>
+
+
+
+
+</div>
+<!-- </div>   -->
+
+<app-footer></app-footer>

@@ -1,0 +1,211 @@
+<app-navbar></app-navbar>
+<div class="container">
+
+    <div class="row text-center ">
+
+<!-- delet client -->
+ <app-clientdetaildelete-confirm [deleteMobile]="mobile"></app-clientdetaildelete-confirm>
+
+        
+<div class="text-left fs-1"
+style="  margin-top: 100px; font-weight: bold; color: #22017a; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
+<p> Client Details</p>
+</div>
+
+    </div>
+    <div class="container mt-5">
+        <div *ngFor="let details of client" class=" mt-5 border p-3 text-light" style="background-color: rgb(20, 20, 20);">
+            <div  class="col-7  w-100 ">
+               <form >
+
+                <h3 class="text-center">Event : {{details.event}}</h3>
+
+                <ul class="list-group text-center mt-3">
+                    <li class="list-group-item ">Name : {{details.username}}</li>
+                    <li class="list-group-item">Number : {{details.mobile}}</li>
+                    <li class="list-group-item">Email : {{details.email}}</li>
+                    <li class="list-group-item">Address : {{details.address}}</li>
+                    <li class="list-group-item">Date of Event : {{details.doe}}</li>
+                    <li class="list-group-item">Place : {{details.place}}</li>
+                    <li class="list-group-item">Package : {{details.packag}}</li>
+
+                </ul>
+
+               </form> 
+            </div> 
+            <!-- ++++++++++++++++++++++++++++++++++++ -->
+            <!-- <div class="col-5">
+                <form >
+                    <h3 class="text-center">Baby Name:{{details.babyname}}</h3>
+                    <ul class="list-group mt-3">
+                        <li class="list-group-item">Father Name:{{details.fname}}</li>
+                        <li class="list-group-item">Mother Number:{{details.mname}}</li>
+                        <li class="list-group-item">Gender:{{details.gender}}</li>
+                        <li class="list-group-item">DOB:{{details.dob}}</li>
+    
+                    </ul>
+
+                 <button (click)="deleteUser()" class="btn btn-dark  mt-3" style="margin-left: 11rem;">Complete</button> 
+
+                 </form> 
+            </div>-->
+            <!-- +++++++++++++++++++++++++++++++++++ -->
+        </div>
+    </div>
+
+  <!-- ------------------------------------------------------------ -->
+
+
+  <div *ngFor="let details of clients" class=" mt-5 border p-3 text-light" style="background-color: rgb(20, 20, 20);">
+    <div  class="col-7  w-100 ">
+       <form >
+
+        <h3 class="text-center">Event : {{details.event}}</h3>
+
+        <ul class="list-group text-center mt-3">
+            <li class="list-group-item ">Name : {{details.username}}</li>
+            <li class="list-group-item">Number : {{details.mobile}}</li>
+            <li class="list-group-item">Email : {{details.email}}</li>
+            <li class="list-group-item">Address : {{details.address}}</li>
+            <li class="list-group-item">Date of Event : {{details.doe}}</li>
+            <li class="list-group-item">Place : {{details.place}}</li>
+            <li class="list-group-item">Package : {{details.packag}}</li>
+
+        </ul>
+
+       </form> 
+    </div> 
+ 
+</div>
+
+
+<!-- ------------------------------------------------------------------------------- -->
+<div *ngFor="let details of clientss" class=" mt-5 border p-3 text-light" style="background-color: rgb(20, 20, 20);">
+    <div  class="col-7  w-100 ">
+       <form >
+
+        <h3 class="text-center">Event : {{details.event}}</h3>
+
+        <ul class="list-group text-center mt-3">
+            <li class="list-group-item ">Name : {{details.username}}</li>
+            <li class="list-group-item">Number : {{details.mobile}}</li>
+            <li class="list-group-item">Email : {{details.email}}</li>
+            <li class="list-group-item">Address : {{details.address}}</li>
+            <li class="list-group-item">Date of Event : {{details.doe}}</li>
+            <li class="list-group-item">Place : {{details.place}}</li>
+            <li class="list-group-item">Package : {{details.packag}}</li>
+
+        </ul>
+
+       </form> 
+    </div> 
+    
+</div>
+
+
+
+
+
+
+
+</div>
+<app-footer></app-footer> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<div class="container">
+    <div class="row text-center "> -->
+
+<!-- delet client --
+<app-clientdetaildelete-confirm [deleteMobile]="mobile"></app-clientdetaildelete-confirm>
+
+        
+        <h2 class="mt-5 " style="width: 450px; margin: 10px 340px 20px; line-height: 2px;border-bottom: 1px solid black;text-align: center;">
+          <span style="background: white;padding: 0 10px;">CLIENT DETAILS</span>
+        </h2>
+        <h3 class="mt-4" style="font-family: 'My Soul', cursive;font-weight: 200px;">
+        We Make The Best  MEmories Ever
+        </h3>
+    </div>
+    <div class="container mt-5">
+        <div *ngFor="let details of client" class="row mt-5 border p-3" style="background-color: rgb(188, 185, 185);">
+            <div  class="col-7">
+               <form >
+
+                <h3 class="text-center">Event:{{details.event}}</h3>
+
+                <ul class="list-group mt-3">
+                    <li class="list-group-item">Name:{{details.username}}</li>
+                    <li class="list-group-item">Number:{{details.mobile}}</li>
+                    <li class="list-group-item">Email:{{details.email}}</li>
+                    <li class="list-group-item">Address:{{details.address}}</li>
+                    <li class="list-group-item">Date of Event:{{details.doe}}</li>
+                    <li class="list-group-item">Place:{{details.place}}</li>
+                    <li class="list-group-item">Package:{{details.packag}}</li>
+
+                </ul>
+               </form> 
+            </div>
+           
+        </div>
+    </div>
+
+    <!-- <div class="container mt-5"> --
+        <div *ngFor="let detail of clients" class="row mt-5 border p-3" style="background-color: rgb(188, 185, 185);">
+            <div  class="col-7">
+               <form >
+                <h3 class="text-center">Event:{{detail.event}}</h3>
+
+                <ul class="list-group mt-3">
+                    <li class="list-group-item">Name:{{detail.username}}</li>
+                    <li class="list-group-item">Number:{{detail.mobile}}</li>
+                    <li class="list-group-item">Email:{{detail.email}}</li>
+                    <li class="list-group-item">Address:{{detail.address}}</li>
+                    <li class="list-group-item">Date of Event:{{detail.doe}}</li>
+                    <li class="list-group-item">Place:{{detail.place}}</li>
+                    <li class="list-group-item">Package:{{detail.packag}}</li>
+
+                </ul>
+               </form> 
+            </div>
+            
+        </div>
+    <!-- </div> --
+
+
+    <div *ngFor="let detailss of clientss" class="row mt-5 border p-3" style="background-color: rgb(188, 185, 185);">
+        <div  class="col-7">
+           <form >
+            <h3 class="text-center">Event:{{detailss.event}}</h3>
+
+            <ul class="list-group mt-3">
+                <li class="list-group-item">Name:{{detailss.username}}</li>
+                <li class="list-group-item">Number:{{detailss.mobile}}</li>
+                <li class="list-group-item">Email:{{detailss.email}}</li>
+                <li class="list-group-item">Address:{{detailss.address}}</li>
+                <li class="list-group-item">Date of Event:{{detailss.doe}}</li>
+                <li class="list-group-item">Place:{{detailss.place}}</li>
+                <li class="list-group-item">Package:{{detailss.packag}}</li>
+
+            </ul>
+           </form> 
+        </div>
+        
+    </div>
+
+
+</div>-->

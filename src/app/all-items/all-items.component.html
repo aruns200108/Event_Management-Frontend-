@@ -1,0 +1,102 @@
+
+<app-navbar></app-navbar>
+
+<div class="container mt-3">
+    <!-- <di class="row"> -->
+        <!-- <di class="col">
+            <h1>Birthday &nbsp;
+                <a routerLink="/add-items" class="btn btn-success">Add new</a>
+            </h1>
+            <p class="mt-4" style="text-align: justify;">This is dummy Data: Lorem ipsum dolor sit amet, 
+                consectetur adipisicing elit. Fugit earum non aliquid quibusdam tempora molestiae doloribus 
+                quae corrupti, sed laboriosam eos. Dolores repudiandae nam dolor quo illum? Cumque, modi dolorum.
+            </p> -->
+            <div class="text-left fs-1"
+            style="  margin-top: 100px; font-weight: bold; color: #22017a; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
+            <p>Wedding Events</p>
+        </div>
+    
+    
+        <div>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae perspiciatis quisquam neque voluptatem
+                aliquam quaerat quidem magnam inventore recusandae, ab odio, facilis officia sequi eos blanditiis vero
+                repellat adipisci porro?</p>
+        </div>
+    
+
+<!-- search -->
+           
+
+
+            <div class="row mt-5">
+
+              <div class="col-lg-4 sm-12  ">
+                  <div>
+                      <input style="width: 150ppx;" type="text" [(ngModel)]="searchKey" placeholder="search Events"
+                          class="form-control mt-2">
+                  </div>
+              </div>
+              <div class="col-4 ms-5 mt-2 w-50">
+                  <h3 class="ms-5">&nbsp;
+                      <a  routerLink="/add-items" class="btn btn-info">
+                          <i class="fa-solid fa-circle-plus"></i> Add New Events</a>
+                  </h3>
+              </div>
+          </div>
+            <!-- card design -->
+            <div class="container mt-4">
+                <div class="row" >
+                    <div class="col-lg-6 mt-3" *ngFor="let additem of addBdayitems | search :searchKey:'theme' ">
+                        <!-- card -->
+                       <div class="card bg-primary" style="box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;" >
+                           <div class="card-body" >
+                            <div class="row">
+                              <!-- divide 2parts -->
+                              <!-- 1st part image -->
+                              <div class="col-md-6">
+                                <img width="250px" height="210px" [src]="additem.image" alt="">
+                              </div>
+                              <!-- 2nd part display contact information -->
+                              <div class="col-md-6">
+                                <ul class="list-group">
+                                   <li class="list-group-item">Item Id:{{additem.id}}</li>
+                                    <li class="list-group-item">Event:{{additem.theme}}</li>
+                                    <!-- <li class="list-group-item">Desserts:{{additem.dessert}}</li> -->
+                                    <!-- <li class="list-group-item">Cake:{{additem.cake}}</li> -->
+                                    <li class="list-group-item">Budget:{{additem.budget}}</li>
+                                </ul>
+                              </div>
+                              <!-- <div class="d-flex justify-content-evently">
+                                <button class="btn btn-dark ms-4 me-4" routerLink="/edit-items/{{additem.id}}" ><i class="fa-solid fa-pen-to-square"></i> Edit</button>
+                                <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop" ><i class="fa-solid fa-trash"></i> Delete</button>
+                             </div> -->
+                              <!-- <a class="btn btn-success me-4" routerLink="/edit-items/{{additem.id}}" style="width: 240px;">Edit</a>
+                              <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="width: 240px;">Delete</button> -->
+                            </div>
+                           </div>
+                       </div>
+
+                    </div>
+                </div>
+            </div>
+        <!-- </di> -->
+    <!-- </di> -->
+</div>
+
+
+<!-- delete item -->
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content mt-5">
+        
+        
+        <h5 class="mt-5 text-center">Are you sure to Delete this item</h5>
+
+        <div class="modal-footer mt-5">
+          <button type="button" (click)="deleteItem(item.id)"  class="btn btn-dark" >Yes</button>
+          <button type="button" class="btn btn-dark" data-bs-dismiss="modal">No</button>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,185 @@
+<!-- <div class="container mt-3">
+    <div class="row text-center ">
+        
+        <h2 class="mt-5 " style="width: 450px; margin: 10px 330px 20px; line-height: 2px;border-bottom: 1px solid black;text-align: center;">
+          <span style="background: white;padding: 0 10px;">CEREMONY</span>
+        </h2>
+        <h3 class="mt-4" style="font-family: 'My Soul', cursive;font-weight: 200px;">
+        We Make The Best  MEmories Ever
+        </h3>
+    </div>
+    <div class="row">
+       
+            
+            <p class="mt-4" style="text-align: justify;">This is dummy Data: Lorem ipsum dolor sit amet, 
+                consectetur adipisicing elit. Fugit earum non aliquid quibusdam tempora molestiae doloribus 
+                quae corrupti, sed laboriosam eos. Dolores repudiandae nam dolor quo illum? Cumque, modi dolorum.
+            </p>
+            -->
+
+            <!-- search -->
+            <!-- <div class="row mt-5">
+
+                <div class="col-lg-6 ms-5">
+                    <div>
+                        <input style="width: 480px;" type="text" [(ngModel)]="searchKey"
+                        placeholder="search theme" class="form-control mt-2">
+                    </div>
+                </div>
+                 <div class="col-4 ms-5 mt-2">
+               <h3 class="ms-5">Ceremony &nbsp;
+                   <a routerLink="/ceremony-add-items" class="btn btn-dark">
+                       <i class="fa-solid fa-circle-plus"></i> Add new</a>
+               </h3>
+               </div>
+            </div> -->
+
+            <!-- card design 
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col-lg-6 mt-3" *ngFor="let additem of addceremonyitem | ceremonysearch: searchKey:'theme' ">
+                        <!-- card 
+                       <div class="card">
+                           <div class="card-body">
+                            <div class="row">
+                              <!-- divide 2parts -->
+                              <!-- 1st part image
+                              <div class="col-md-6">
+                                <img width="250px" height="210px" [src]="additem.image" alt="">
+                              </div>
+                              <!-- 2nd part display contact information 
+                              <div class="col-md-6">
+                                <ul class="list-group mt-3" style="border: none;">
+                                    <li class="list-group-item">Item Id:{{additem.id}} </li>
+                                    <li class="list-group-item">Theme:{{additem.theme}} </li>
+                                    <li class="list-group-item">Budget:{{additem.budget}}</li>
+                                    <!-- <li class="list-group-item">Place:{{additem.place}}</li> -->
+                                <!-- </ul> -->
+                                <!-- +++++++++++++ -->
+                             <!-- <div class="d-flex justify-content-evently mt-3">
+                                <button class="btn btn-dark ms-4 me-4" routerLink="/ceremony-edit-items" ><i class="fa-solid fa-pen-to-square"></i> Edit</button>
+                                <button class="btn btn-dark" ><i class="fa-solid fa-trash"></i> Delete</button>
+                             </div> -->
+                                <!-- ++++++++++++++++ -->
+                              <!-- </div>
+                             
+                            </div>
+                           
+                           </div>
+                       </div>
+
+                    </div>
+                </div>
+            </div>
+      
+    </div>
+</div>
+ -->
+<!-- -------------------------------------------- -->
+
+
+<app-navbar></app-navbar>
+<div class="container ">
+    <div class="text-left fs-1"
+        style="  margin-top: 100px; font-weight: bold; color: #22017a; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
+        <p>Social Events</p>
+    </div>
+
+
+    <div>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae perspiciatis quisquam neque voluptatem
+            aliquam quaerat quidem magnam inventore recusandae, ab odio, facilis officia sequi eos blanditiis vero
+            repellat adipisci porro?</p>
+    </div>
+
+    <!-- search -->
+    <div class="row mt-5">
+
+        <div class="col-lg-4 sm-12  ">
+            <div>
+                <input style="width: 150ppx;" type="text" [(ngModel)]="searchKey" placeholder="search Events"
+                    class="form-control mt-2">
+            </div>
+        </div>
+        <div class="col-4 ms-5 mt-2 w-50">
+            <h3 class="ms-5">&nbsp;
+                <a routerLink="/social-add-items" class="btn btn-info">
+                    <i class="fa-solid fa-circle-plus"></i> Add New Events</a>
+            </h3>
+        </div>
+    </div>
+
+
+
+
+    <!-- card design -->
+    <!-- <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-6 mt-3" *ngFor="let additem of addnewbornitems | newbornsearch : searchKey:'theme'">
+                <!-- card  -
+                <div class="card bg-primary" style="box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;">
+                    <div class="card-body">
+                        <div class="row">
+                            <!-- divide 2parts -->
+                            <!-- 1st part image -
+                            <div class="col-md-6">
+                                <img width="250px" height="210px" [src]="additem.image" alt="">
+                            </div>
+                            <!-- 2nd part display contact information 
+                            <div class="col-md-6 ">
+                                <ul class="list-group mt-3" style="border: none;">
+                                    <li class="list-group-item">Item Id: {{additem.id}}</li>
+                                    <li class="list-group-item">Event Name: {{additem.theme}}</li>
+                                    <li class="list-group-item">Budget: {{additem.budget}}</li>
+                                    <li class="list-group-item">Place:{{additem.place}}</li>
+                                </ul>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div> -->
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-6 mt-3" *ngFor="let additem of addceremonyitem | ceremonysearch: searchKey:'theme' ">
+                <!-- card -->
+               <div class="card bg-primary" style="box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;">
+                   <div class="card-body">
+                    <div class="row">
+                      <!-- divide 2parts -->
+                      <!-- 1st part image-->
+                      <div class="col-md-6">
+                        <img width="250px" height="210px" [src]="additem.image" alt="">
+                      </div>
+                      <!-- 2nd part display contact information -->
+                      <div class="col-md-6">
+                        <ul class="list-group mt-3" style="border: none;">
+                            <li class="list-group-item">Item Id:{{additem.id}} </li>
+                            <li class="list-group-item">Event:{{additem.theme}} </li>
+                            <li class="list-group-item">Budget:{{additem.budget}}</li>
+                            <!-- <li class="list-group-item">Place:{{additem.place}}</li> -->
+                        </ul> 
+                        <!-- +++++++++++++ -->
+                     <!-- <div class="d-flex justify-content-evently mt-3">
+                        <button class="btn btn-dark ms-4 me-4" routerLink="/ceremony-edit-items" ><i class="fa-solid fa-pen-to-square"></i> Edit</button>
+                        <button class="btn btn-dark" ><i class="fa-solid fa-trash"></i> Delete</button>
+                     </div> -->
+                        <!-- ++++++++++++++++ -->
+                      </div>
+                     
+                    </div>
+                   
+                   </div>
+               </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>

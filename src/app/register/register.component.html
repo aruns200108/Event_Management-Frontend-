@@ -1,0 +1,156 @@
+<!-- <div class="container mt-3">
+    <div class="row ">
+        <h6 class="text-center" style=" width: 500px; margin: 10px 320px  20px; line-height: 2px;border-bottom: 1px solid black;text-align: center;">
+            <span style="background: white;padding: 0 10px;">NEWBORN MEMORIES</span>
+          </h6>
+          <h3 class="text-center">USER REGISTER</h3> 
+    </div>
+
+    <div class="login mt-3 bg-dark text-center" 
+    style="width: 380px;height: 450px;border-radius: 20px;margin-left: 390px;">
+    <i class="fa-solid fa-circle-user"
+     style="color: #f2f2f2;font-size: 100px;margin-top: 30px;"></i>
+  <div class="mt-4">
+    <h6 class="text-center" style="margin: 10px 50px 20px; line-height: 2px;border-bottom: 1px solid white;text-align: center;">
+      <span class="bg-dark text-light text-center" style="padding: 0 10px;">REGISTRATION</span>
+    </h6>
+
+  </div> -->
+<!--      
+     <form [formGroup]="registerForm">
+
+        <input type="text" placeholder="Name" name="uname" formControlName="uname"
+        class="form-control ms-4" style="width: 320px;margin-left: 20px;"> 
+        name validation 
+        <div *ngIf="this.registerForm.get('uname')?.errors && this.registerForm.get('uname')?.touched" 
+        class="text-danger mb-2" style="margin-left: 20px;font-size: 13px;">Invalid Name</div>
+  
+
+        <input type="password" placeholder="Password" name="pswd" formControlName="pswd"
+         class="form-control mt-2 ms-4" style="width: 320px;margin-left: 20px;">
+         pswd validation 
+        <div *ngIf="this.registerForm.get('pswd')?.errors && this.registerForm.get('pswd')?.touched" 
+        class="text-danger mb-2" style="margin-left: 20px;font-size: 13px;">Invalid Password</div>
+  
+
+        <input type="text" placeholder="Mobile Number" name="mobile" formControlName="mobile"
+        class="form-control mt-2 ms-4" style="width: 320px;margin-left: 20px;"> 
+        mobile validation 
+        <div *ngIf="this.registerForm.get('mobile')?.errors && this.registerForm.get('mobile')?.touched" 
+        class="text-danger mb-2" style="margin-left: 20px;font-size: 13px;">Invalid Mobile number please enter 10 digit Number</div>
+
+        <input type="text"placeholder="Email" name="email" formControlName="email"
+        class="form-control mt-2 ms-4" style="width: 320px;margin-left: 20px;">
+         email validation
+         <div *ngIf="this.registerForm.get('email')?.errors && this.registerForm.get('email')?.touched" 
+         class="text-danger mb-2" style="margin-left: 20px;font-size: 13px;">Invalid email</div>
+   
+        <button (click)="register()"
+        class="btn btn-light text-dark mt-3" >Register</button>
+  <br>
+   <div class="text-center">
+        <span class="ms-2 text-light text-center">Already have account ? <a routerLink="/login" class="text-light">login</a></span>
+      </div>
+     </form>
+
+    </div>
+
+</div> -
+
+
+ ------------------------------------------------------------- -->
+<app-navbar></app-navbar>
+
+<section class="vh-75 " style="margin-top: 130px; ">
+  <div class="container h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-lg-12 col-xl-11">
+        <div class="card text-black " style="border-radius: 25px;">
+          <div class="card-body p-md-5">
+            <div class="row justify-content-center">
+              <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+
+                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
+
+                <form [formGroup]="registerForm" class="mx-1 mx-md-4">
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-user fa-lg fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <input type="text" placeholder="Name" name="uname" formControlName="uname"
+                        class="form-control ms-4">
+                      <!-- name validation  -->
+                      <div *ngIf="this.registerForm.get('uname')?.errors && this.registerForm.get('uname')?.touched"
+                        class="text-danger mb-2" style="margin-left: 120px;font-size: 13px;">Invalid Name</div>
+
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-envelope fa-lg fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+
+                      <input type="text" placeholder="Email" name="email" formControlName="email"
+                        class="form-control mt-2 ms-4">
+                      <!-- email validation -->
+                      <div *ngIf="this.registerForm.get('email')?.errors && this.registerForm.get('email')?.touched"
+                        class="text-danger mb-2" style="margin-left: 120px;font-size: 13px;">Invalid email</div>
+
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-phone fa-lg  fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+
+                      <input type="text" placeholder="Mobile Number" name="mobile" formControlName="mobile"
+                        class="form-control mt-2 ms-4">
+                      <!-- mobile validation -->
+                      <div *ngIf="this.registerForm.get('mobile')?.errors && this.registerForm.get('mobile')?.touched"
+                        class="text-danger mb-2" style="margin-left: 30px;font-size: 13px;">Invalid Mobile number please
+                        enter 10 digit Number</div>
+
+                    </div>
+                  </div>
+
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-lock fa-lg  fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+
+                      <input type="password" placeholder="Password" name="pswd" formControlName="pswd"
+                        class="form-control mt-2 ms-4">
+                      <!-- pswd validation  -->
+                      <div *ngIf="this.registerForm.get('pswd')?.errors && this.registerForm.get('pswd')?.touched"
+                        class="text-danger mb-2" style="margin-left:120px;font-size: 13px;">Invalid Password</div>
+
+                    </div>
+                  </div>
+
+
+
+
+                  <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                    <button (click)="register()" type="button" class="btn btn-primary btn-lg">Register</button>
+                  </div>
+                  <div class="text-center">
+                    <span class="ms-2 text-dark text-center">Already have account ? <a routerLink="/login" class="text-primary">login</a></span>
+                  </div>
+                </form>
+
+              </div>
+              <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
+                  class="img-fluid" alt="Sample image">
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>

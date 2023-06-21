@@ -1,0 +1,130 @@
+<!-- admin login success msg -->
+<!-- 
+<div *ngIf="successMsg" style="margin-top: 250px;margin-left: 550px;">
+  <img src="https://open.assembly.go.kr/images/ajax_loader.gif" alt="">
+</div> -->
+
+
+<!-- login design -->
+
+<!-- 
+<div *ngIf="!successMsg" class="container mt-5">
+  <div class="row ">
+    <div class="login">
+      <h6 class="text-center"
+        style="margin: 10px 310px 20px;width:500px; line-height: 2px; border-bottom: 1px solid black;">
+        <span class="text-center" style="background: white;padding: 0 10px;">NEWBORN MEMORIES</span>
+      </h6>
+    </div>
+    <h3 class="text-center">ADMIN LOGIN</h3>
+  </div>
+
+  <div class="login mt-5 bg-dark text-center"
+    style="width: 370px;height: 380px;border-radius: 20px;margin-left: 390px;">
+    <i class="fa-solid fa-circle-user" style="color: #f2f2f2;font-size: 100px;margin-top: 20px;"></i>
+
+    <div class="mt-4 text-center">
+      <h6 class="text-center"
+        style=" width: 200px; margin: 10px 90px 20px; line-height: 2px;border-bottom: 1px solid white;text-align: center;">
+        <span class="bg-dark text-light text-center" style="padding: 0 10px;">ADMIN LOGIN</span>
+      </h6>
+    </div>
+
+    <form [formGroup]="adminLoginForm" (ngSubmit)="adminLogin()">
+
+      <input type="text" placeholder="Name" name="adminName" formControlName="adminName" class="form-control mt-2 ms-4"
+        style="width: 310px;">
+      <div *ngIf="this.adminLoginForm.get('adminName')?.errors && this.adminLoginForm.get('adminName')?.touched"
+        class="text-danger" style="margin-left: 20px;font-size: 13px;">Name is Required</div>
+
+
+      <input type="password" placeholder="Password" name="adminPswd" formControlName="adminPswd"
+        class="form-control mt-2 ms-4" style="width: 310px;">
+      <div *ngIf="this.adminLoginForm.get('adminPswd')?.errors && this.adminLoginForm.get('adminPswd')?.touched"
+        class="text-danger" style="margin-left: 20px;font-size: 13px;">Password is Required</div>
+
+      erroe msg
+
+
+      <div class="text-danger mt-2 ms-4">
+        {{errorMsg}}
+      </div>
+
+      <br>
+      <button type="sumbit" class="btn btn-light text-dark">Login</button>
+      <br>
+
+      <div class="text-center">
+        <span class="ms-2 text-light text-center">New User? <a routerLink="/admin-register"
+            class="text-light">Register</a></span>
+      </div>
+    </form>
+
+  </div>
+
+</div> -->
+
+
+<!-- ------------------------------------------------------ -->
+<app-navbar></app-navbar>
+
+  <div *ngIf="!successMsg" class="container mt-5">
+<section class="vh-100 " style="margin-top: 130px;">
+
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-9 col-lg-6 col-xl-5">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" class="img-fluid"
+          alt="Sample image">
+      </div>
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+        <form [formGroup]="adminLoginForm" (ngSubmit)="adminLogin()">
+          <h2 class="mb-5 mt-4 text-center">Admin Login</h2>
+
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+        
+      <input type="text" placeholder="Name" name="adminName" formControlName="adminName" class="form-control mt-2 ms-4"
+      style="width: 310px;">
+    <div *ngIf="this.adminLoginForm.get('adminName')?.errors && this.adminLoginForm.get('adminName')?.touched"
+      class="text-danger" style="margin-left: 50px;font-size: 13px;">Name is Required</div>
+
+          </div>
+
+          <!-- Password input -->
+          <div class="form-outline ">
+            
+      <input type="password" placeholder="Password" name="adminPswd" formControlName="adminPswd"
+      class="form-control mt-2 ms-4" style="width: 310px;">
+    <div *ngIf="this.adminLoginForm.get('adminPswd')?.errors && this.adminLoginForm.get('adminPswd')?.touched"
+      class="text-danger" style="margin-left: 50px;font-size: 13px;">Password is Required</div>
+
+          </div>
+
+
+
+          <!-- erroe msg -->
+
+
+          <div class="text-danger mt-2 ms-4">
+            {{errorMsg}}
+          </div>
+    
+
+
+
+          <div class="text-center text-lg-start mt-4 pt-2 ms-4">
+            <button (click)="adminLogin()" type="button" class="btn btn-primary btn-lg"
+              style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
+            <!-- <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a routerLink="/admin-register" class="link-danger">Register</a>
+            </p> -->
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+</section>
+</div>
+<app-footer></app-footer>

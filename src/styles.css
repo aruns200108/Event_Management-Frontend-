@@ -1,0 +1,5 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alfa+Slab+One&family=Arizonia&family=Ballet:opsz@16..72&family=Bree+Serif&family=Bungee&family=Cookie&family=Creepster&family=Gentium+Book+Plus&family=Great+Vibes&family=Kaushan+Script&family=Labrada&family=Lobster+Two&family=Martian+Mono:wght@300&family=My+Soul&family=Noto+Sans+Symbols+2&family=Noto+Serif&family=Nunito+Sans:wght@300&family=Pacifico&family=Playball&family=Poppins:wght@200&family=Roboto+Slab:wght@300&family=Rokkitt&family=STIX+Two+Text&family=Satisfy&family=Solway:wght@300;400&family=Teko:wght@500;600&family=Vollkorn&display=swap');
+body{
+    font-family: 'Bree Serif', serif;
+}

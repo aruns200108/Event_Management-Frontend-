@@ -1,0 +1,116 @@
+#courses{
+   width: 100%;
+  height: 100vmax;
+  display: flex;
+    /* justify-content: center;
+   align-items: center;  */
+   flex-wrap: wrap;
+   align-content: flex-start;
+   justify-content: space-around;
+   /* flex-direction: column; */
+   background: white;
+   padding: 20px;  
+  
+} 
+.courseheading{
+   text-align: center;
+   align-items: center;
+}
+/* .h1course{
+   text-align: center;
+   align-items: center;
+   margin-top: 20px;
+}
+.h3course{
+   margin-top: 30px;
+   margin-bottom: 50px;
+   align-items: center;
+}  */
+
+.course-div{
+   margin: 0 2rem 0  2rem;
+     /* position: relative;   */
+    
+   width: 300px;
+   height: 180px;
+   border-radius: 10px;
+   box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+   padding: 30px;
+   transition: .3s;
+   /* background-color: white; */
+   background-color: black;
+   cursor: pointer;
+   margin-bottom: 100px;
+   margin-top: 50px;
+   
+}
+
+.course-div:hover{
+height: 300px;
+transition: .3s;
+}
+.course-div:hover .course-content{
+   transform: translateY(-170px);
+   opacity: 1;
+}
+.imgbox{
+     /* position: relative;    */
+   width: 100%;
+   height: 100%;
+    /* z-index: 99;  */
+    /* background-size: cover; */
+}  
+.imgbox img{
+   /* position: relative; */
+   width: 150px;
+   height:150px;
+   border-radius: 10px;
+   box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+   transform: translateY(-80px);
+    /* background-size: cover;  */
+}
+/* .course-div:hover{
+   transform: scale(1.1);
+} */
+.course-content{
+   transition: .3s;
+   transform: translateY(-350px);
+   text-align: center;
+   opacity: 0;
+}
+.name{
+   color: white;
+   position: absolute;
+   margin-top: -4rem;
+   margin-left: 4rem;
+}
+.cnt {
+  margin-top: 4rem;
+  margin-left: -2rem;
+} 
+/* .course-content p{
+   color: white;
+} */
+.main-div{
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   flex-wrap: wrap;
+} 
+@media screen and (max-width:700px) {
+   #courses{
+       /* flex-direction: column; */
+       width: 100%; 
+       height: 590vh;
+
+   }
+   .course-div{
+       margin-top: 20px;
+   }
+   .h3course{
+       margin-bottom: 100px;
+   }
+}
+

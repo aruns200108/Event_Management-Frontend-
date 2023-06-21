@@ -1,0 +1,28 @@
+#baby input{
+    border: none;
+    box-shadow: none;
+    
+}
+#baby input:hover{
+    border: none;
+    box-shadow: none;
+    
+}
+#baby input[type="text"]{
+    background-color:rgb(188, 185, 185) ;
+    
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    width:200px;
+    /* color:transparent; */
+    /* cursor:default; */
+}
+
+#bookbtn{
+    position: absolute;
+    margin-left: 48rem;
+    margin-top: -6rem;
+    width: 15rem;
+}

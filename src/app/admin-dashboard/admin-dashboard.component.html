@@ -1,0 +1,85 @@
+<!-- 
+<div class="container mt-5">
+
+  <div class="row text-center ">
+        
+    <h2 class="mt-2 " style="width: 450px; margin: 10px 330px 20px; line-height: 2px;border-bottom: 1px solid black;text-align: center;">
+      <span style="background: white;padding: 0 10px;">ADMIN</span>
+    </h2>
+    <h3 class="mt-4" style="font-family: 'My Soul', cursive;font-weight: 200px;">
+    We Make The Best  MEmories Ever
+    </h3>
+</div>
+
+<div class="row mt-2" >
+  <div class="main-div" >
+    <div class="course-div"  *ngFor="let admins of adminsreg">
+       <div class="imgbox"  >
+         <img width="120px" height="120px" style="background-color: white;border-radius: 250px;margin-left: 40px;" 
+         [src]="admins.adminimage" alt="">
+
+         <div class="name">
+          <h3>{{admins.adminName}}</h3>
+         </div>
+
+       </div>
+       <div class="course-content">
+          
+          <div class="cnt">
+            
+            <ul class="text-light text-center " style="list-style: none;">
+              <li>Email Id: {{admins.adminEmail}}</li>
+              <li>Phnone No: {{admins.adminMobile}}</li>
+            </ul>
+          </div>  
+          
+       </div>
+    </div>
+</div>
+</div> -->
+
+
+
+<app-navbar></app-navbar>
+<div class="container ">
+    <div class="text-center fs-1"
+        style="  margin-top: 100px; color: #0c0227;font-family: Courier, monospace;">
+        <p>Admin Profile</p>
+    </div>
+
+
+     <!-- card design -->
+     <div class="container d-flex justify-content-center mt-5">
+  
+          <div class="col-lg-6 mt-3  " *ngFor="let admins of adminsreg" >
+       
+              <div class="card  bg-primary " style=" box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;">
+                  <div class="card-body d-flex justify-content-center row ">
+                      
+                          <!-- divide 2parts -->
+                          <!-- 1st part image -->
+                          <div class="col-md-6 ">
+                              <img style="border-radius:30px" width="250px" height="210px" [src]="admins.adminimage" alt="">
+                          </div>
+                          <!-- 2nd part display contact information -->
+                          <div class="col-md-6  ">
+                              <ul class="list-group mt-3" style="border: none;">
+                                  <li class="list-group-item"><strong>Name</strong> : {{admins.adminName}} </li>
+                                  <li class="list-group-item"><strong>Email</strong> : {{admins.adminEmail}} </li>
+                                  <li class="list-group-item"><strong>Phone</strong> : {{admins.adminMobile}}</li>
+
+                              </ul>
+
+                          </div>
+
+                 
+
+                  </div>
+              </div>
+
+          </div>
+  
+  </div>
+
+    </div>
+<app-footer></app-footer>

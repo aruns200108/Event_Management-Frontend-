@@ -1,0 +1,118 @@
+<!-- login success msg -->
+
+<div *ngIf="successMsg" style="margin-top: 0px;margin-left:310px;">
+
+  <img src="https://thumbs.gfycat.com/HugeDeliciousArchaeocete-max-1mb.gif" alt="">
+</div>
+
+
+<!-- login design -->
+<!-- <div *ngIf="!successMsg" class="container mt-5">
+  <div class="row ">
+    <div class="login">
+      <h6 class="text-center"
+        style="margin: 10px 310px 20px;width:500px; line-height: 2px; border-bottom: 1px solid black;">
+        <span class="text-center" style="background: white;padding: 0 10px;">NEWBORN MEMORIES</span>
+      </h6>
+    </div>
+    <h3 class="text-center">USER LOGIN</h3>
+  </div>
+
+  <div class="login mt-5 bg-dark text-center"
+    style="width: 370px;height: 380px;border-radius: 20px;margin-left: 390px;">
+    <i class="fa-solid fa-circle-user" style="color: #f2f2f2;font-size: 100px;margin-top: 20px;"></i>
+
+    <div class="mt-4 text-center">
+      <h6 class="text-center"
+        style=" width: 200px; margin: 10px 90px 20px; line-height: 2px;border-bottom: 1px solid white;text-align: center;">
+        <span class="bg-dark text-light text-center" style="padding: 0 10px;">LOGIN</span>
+      </h6>
+    </div>
+
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+
+      <input type="text" placeholder="Name" name="uname" formControlName="uname" class="form-control ms-4 "
+        style="width: 310px;">
+      <div *ngIf="this.loginForm.get('uname')?.errors && this.loginForm.get('uname')?.touched" class="text-danger"
+        style="margin-left: 20px;font-size: 13px;">Name is Required</div>
+
+
+      <input type="password" placeholder="Password" name="pswd" formControlName="pswd" class="form-control mt-2 ms-4"
+        style="width: 310px;">
+      <div *ngIf="this.loginForm.get('pswd')?.errors && this.loginForm.get('pswd')?.touched" class="text-danger"
+        style="margin-left: 20px;font-size: 13px;">Password is Required</div>
+
+      erroe msg -->
+<!-- <div class="text-danger mt-2 ms-4">
+        {{errorMsg}}
+      </div>
+
+      <br>
+      <button type="submit" class="btn btn-light text-dark">Login</button>
+      <br>
+
+      <div class="text-center">
+        <span class="ms-2 text-light text-center">New User? <a routerLink="/register"
+            class="text-light">Register</a></span>
+      </div>
+    </form>
+
+  </div>
+
+</div>
+ -->
+
+<!-- ------------------------------------------------------------------------- -->
+<app-navbar></app-navbar>
+
+<div  *ngIf="!successMsg" class="container mt-5">
+  <section class="vh-100 p-5 mt-5">
+    <div class="container py-5 h-100">
+      <div class="row d-flex align-items-center justify-content-center h-100">
+        <div class="col-md-8 col-lg-7 col-xl-6">
+          <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg" class="img-fluid"
+            alt="Phone image">
+        </div>
+        <div  class="col-md-7 col-lg-5 col-xl-5 offset-xl-1 ">
+          <h2 style="margin-right: 90px; color: #1f3ff1;" class="text-center mb-5 " >SIGN IN</h2>
+          <form [formGroup]="loginForm" (ngSubmit)="login()">
+
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+              <input type="text" placeholder="Name" name="uname" formControlName="uname" class="form-control  "
+                style="width: 310px;">
+              <div *ngIf="this.loginForm.get('uname')?.errors && this.loginForm.get('uname')?.touched"
+                class="text-danger" style="margin-left:92px;font-size: 13px;">Name is Required</div>
+            </div>
+
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+              <input type="password" placeholder="Password" name="pswd" formControlName="pswd"
+                class="form-control mt-2" style="width: 310px;">
+              <div *ngIf="this.loginForm.get('pswd')?.errors && this.loginForm.get('pswd')?.touched" class="text-danger"
+                style="margin-left: 92px;font-size: 13px;">Password is Required</div>
+            </div>
+
+            <div class="text-danger mt-2 ms-4">
+              {{errorMsg}}
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary btn-lg btn-block ">Sign in</button>
+          
+            <div class="text-center mt-4">
+              <span class=" mt-4 text-center">New User? <a routerLink="/register" class="text-dark">Register</a></span>
+            </div>
+
+
+          </form>
+
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+</div>
+
+<app-footer></app-footer>

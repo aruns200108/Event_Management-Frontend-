@@ -1,0 +1,118 @@
+
+<!-- <div>
+    <img width="100%" src="https://weedit.photos/wp-content/uploads/2022/04/cute-and-safe-baby-photoshoot-ideas.jpg" alt="">
+</div> -->
+<!-- navbar -->
+<!-- <nav class="navbar navbar-expand-lg bg-dark fixed-top bg-opacity-50 " >
+  <div class="container-fluid  text-center">
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse  text-center" id="navbarNavAltMarkup">
+     
+      <a class="navbar-brand text-light text-center" id="navigationbar" >Birthday Event</a>
+      <div class="navbar-nav" >
+          
+        </div>
+    </div>
+  </div>
+</nav> -->
+
+
+
+
+<app-navbar></app-navbar>
+
+<!-- bday -->
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-5">
+      <!-- content -->
+      <h1 style="margin-top: 100px;">Welcome {{currentUser}}</h1>
+      <label class="mt-2" style="text-align: justify;">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        Repellendus
+        dolores molestias nulla harum voluptatum asperiores magnam optio temporibus beatae
+        aperiam natus, odio iusto, officia facilis repudiandae dolor quibusdam, vero excepturi.</label>
+
+      <div style="text-align: justify;" class="collapse" id="collapseExample">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi atque alias at sit
+        sunt quas culpa rerum numquam id tempor perspiciatis placeat sed delectus, quaerat nostrum
+        accusamus minus? Delectus, ex.
+      </div>
+
+      <button (click)="collapse()" class="btn btn-dark mt-2" type="button" data-bs-toggle="collapse"
+        data-bs-target="#collapseExample">
+        Read <span *ngIf="isCollapse">More</span>
+        <span *ngIf="!isCollapse">Less</span> </button>
+    </div>
+
+
+
+    <div class="col-md-7  mt-5 ">
+      <!-- img -->
+      <div class=" ms-2">
+
+        <iframe class="w-100"  height="315" src="https://www.youtube.com/embed/BSoQ74lG4xQ?start=46" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="container mt-2">
+  <div class="row mt-4"> 
+     
+   <div class="content text-center">
+     <p class="fs-1" style="font-family: Gill Sans Extrabold sans-serif;">Wedding Event</p>
+     </div>
+  </div>
+  </div>
+
+<!--  cards -->
+
+<div class="container mt-3">
+  <div class="row" >
+
+    
+
+
+
+      <div class="col-lg-4 mt-5" *ngFor="let additem of addBdayitems">
+          <!-- card -->
+         <div class="card bg-primary " style="box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;" >
+             <div class="card-body" >
+              <div class="row">
+                <!-- divide 2parts -->
+                <!-- 1st part image -->
+                <div class="col-md-4 ">
+                  <img width="300px" height="200px" [src]="additem.image" alt="" style="margin-left: 10px;">
+                </div>
+                <!-- 2nd part display contact information -->
+                <!-- <div class="col-md-7"> -->
+                  <div class="text-center">
+                    <h5 class="list-group-item">Event : {{additem.theme}}</h5>
+                      
+                      <h6 class="list-group-item">Budget : {{additem.budget}}</h6>
+                  </div>
+                <!-- </div> -->
+                <!-- <a class="btn btn-dark me-4" routerLink="/view-bday/{{additem.id}}" 
+                style="width: 120px;margin-left: 40px;">More Details</a> -->
+
+                <button class="btn btn-dark " routerLink="/weddingbooking" style="width: 120px;margin-left: 7rem;">Book Now</button>
+              </div>
+             </div>
+         </div>
+
+      </div>
+
+        
+    </div>
+</div>
+
+<app-footer></app-footer>

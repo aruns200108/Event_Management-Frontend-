@@ -1,0 +1,302 @@
+<!-- log out  -->
+<div *ngIf="logoutStatus"  class=" text-center">
+ 
+<h2 style="margin-top: 300px;">Logging Out.....</h2>
+</div>
+
+<!-- delete successMsg  -->
+<div *ngIf="deleteSuccessMsg" style="width: 100%" class="d-flex justify-content-center">
+  <h1 class="mt-5 bg-warning text-center">{{deleteSuccessMsg}}</h1>
+</div>
+
+<!-- delete confirm child  -->
+<app-delete-confirm (onDelete)="deleteFromParent()" (onCancel)="cancelDeleteConfirm()"
+  [deleteadminacnt]="adminacnt"></app-delete-confirm>
+
+
+<!--======== navbar=============  -->
+<ng-container *ngIf="!deleteConfirmStatus">
+  <div *ngIf="!logoutStatus">
+
+
+    <nav *ngIf="!deleteConfirmStatus" class="navbar navbar-expand-lg  bg-dark" style="z-index: 10px; margin-top: 100p;">
+      <div class="container-fluid">
+        <a class="navbar-brand text-light" style="font-family: 'Georgia', cursive;;margin-left: 20px;font-size: 30px;">
+          EVENTO</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon "></span>
+        </button>
+
+      </div>
+    </nav>
+    <!-- ============navabar end====================== -->
+
+    <!-- ===========sidenvavbar =================-->
+
+
+
+    <!-- <div class="area "></div> -->
+    <nav class="main-menu vh-100 pt-2" style="margin-top: 71px;">
+      <ul>
+        <!-- <li>
+          <a routerLink="/events">
+            <i class="fa fa-home fa-2x"></i>
+            <span class="nav-text">
+              EVENTS
+            </span>
+          </a>
+
+        </li> -->
+        <li class="has-subnav ">
+          <a routerLink="/admin-dashboard">
+            <i class="fa fa-user fa-2x"></i>
+            <span class="nav-text">
+              ADMIN PROFILE
+            </span>
+          </a>
+
+        </li>
+        <li class="has-subnav">
+          <a routerLink="/clientdetails">
+            <i class="fa fa-circle-user fa-2x"></i>
+            <span class="nav-text">
+              CLIENTS
+            </span>
+          </a>
+
+        </li>
+        <li class="has-subnav">
+          <a routerLink="/clients">
+            <i class="fa fa-laptop fa-2x"></i>
+            <span class="nav-text">
+              WORKS
+            </span>
+          </a>
+
+        </li>
+
+        <li>
+          <a (click)="deleteAccount()">
+            <i class="fa fa-trash fa-2x"></i>
+            <span class="nav-text">
+              Delete Account
+            </span>
+          </a>
+        </li>
+      </ul>
+
+      <ul class="logout">
+        <li>
+          <a (click)="logout()">
+            <i class="fa fa-power-off fa-2x  "></i>
+            <span class="nav-text ">
+              Logout
+            </span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ===========main-content=========== -->
+
+    <div class=" ms-5 p-5 ">
+      <div>
+        <h1>Welcome <span style="color: black;">{{currentAdmin}}</span></h1>
+      </div>
+
+      <p>This is a Dummy Data : Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi distinctio dolor ab ad
+        esse, blanditiis eius quasi est quaerat quia modi recusandae natus, eaque consectetur saepe commodi nesciunt,
+        laboriosam nisi! lo</p>
+
+    </div>
+
+    <div class="container text-center">
+      <h2 class="ms-5">Add  Events</h2>
+    </div>
+
+    <!-- <div class="container mt-5" style="display:flex;margin-top: -12rem;margin-left: 25rem;gap: 3rem;">
+
+      <div class="row ">
+        <a style="width: 250px;height: 150px;border-radius: 8px;"
+          class="list-group-item list-group-item-action bg-dark " routerLink="/newborn-items"> -->
+
+    <!-- +++++++++++++ -->
+    <!-- <span class="btn text-light " style="border:none;font-size: 30px;">Newborn</span> -->
+    <!-- +++++++++++++++++ -->
+
+    <!-- <h6 class="text-center"
+            style=" width: 200px; margin: 10px 1rem 10px; line-height: 2px;border-bottom: 1px solid white;text-align: center;margin-top: 2rem;">
+            <span class="bg-dark text-light text-center" style="padding: 0 10px;">BABY PHOTOSHOOT</span>
+          </h6>
+        </a>
+      </div>
+
+      <div class="row ">
+        <a style="width: 250px;height: 150px;border-radius: 8px;"
+          class="list-group-item list-group-item-action bg-dark " routerLink="/ceremony-items">  -->
+
+    <!-- +++++++++++++++ -->
+    <!-- <span class="btn text-light" style="border: none;">Ceremony</span> -->
+    <!-- +++++++++++++++++++ -->
+    <!-- <h6 class="text-center"
+            style=" width: 200px; margin: 10px 1rem 10px; line-height: 2px;border-bottom: 1px solid white;text-align: center;margin-top: 2rem;">
+            <span class="bg-dark text-light text-center" style="padding: 0 10px;">CEREMONY</span>
+          </h6>
+        </a>
+      </div>
+
+
+
+      <div class="row ">
+        <a style="width: 250px;height: 150px;border-radius: 8px;"
+          class="list-group-item list-group-item-action bg-dark " routerLink="/all-items"> -->
+
+    <!-- +++++++++++++++++ -->
+    <!-- <span class="btn text-light" style="border: none;">Birthday</span> -->
+    <!-- ++++++++++++++++++++++++++ -->
+
+    <!-- <h6 class="text-center"
+            style=" width: 200px; margin: 10px 1rem 10px; line-height: 2px;border-bottom: 1px solid white;text-align: center;margin-top: 2rem;">
+            <span class="bg-dark text-light text-center" style="padding: 0 10px;">BIRTHDAY</span>
+          </h6>
+        </a>
+
+      </div>
+    </div> -->
+
+
+
+
+
+    <!-- ////////////////////////////////////////   add cards here -->
+
+
+    <div class="container d-flex justify-content-center mt-4 "  >
+      <div class="row row-cols-1 row-cols-md-3 ms-5  ">
+      <!-- <div class=" "> -->
+
+        <div class="col mb-3  " >
+
+          <a  routerLink="/corporate-items">
+
+            <img src="https://i.postimg.cc/J42Nzm2n/ds-Buffer-bmp.png" alt="a canyon"
+              style=" border-radius: 150px; --g: 20px;--b:5px;--c:#363636;">
+             <div>    <label class="  mt-1 text-center text-dark" >Corporate Events</label></div>
+            
+              
+            
+          </a>
+        </div>
+
+
+
+        <div class="col mb-3 " >
+          <a  routerLink="/social-items">
+
+            <img src="https://i.postimg.cc/wvRXNrRz/socialevevnt.jpg" alt="a canyon"
+              style="border-radius: 150px; --g: 20px;--b:5px;--c:#181615;">
+              <div class="lab2">    <label class="ms-2  mt-1 text-center text-dark" >Social Events</label></div>
+            
+          </a>
+        </div>
+
+
+
+        <div class="col mb-3">
+          <div>
+          <a routerLink="/all-items">
+
+            <img src="https://i.postimg.cc/g2X484XG/weddingevent.jpg" alt="a canyon"
+              style="border-radius: 150px; --g: 20px;--b:5px;--c:#1a1717; ">
+              
+              <div class="lab3">    <label class="  mt-1 text-center text-dark" >Wedding Events</label></div>
+          </a>
+        </div>
+        </div>
+      <!-- </div> -->
+      </div>
+    </div>
+
+
+    <!-- <div class="container d-flex">
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div class="card h-50 w-75 ms-5">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="col">
+    <div class="card h-50 w-75 ms-5 " style="margin-bottom: 100px;">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-50 ">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+  -->
+
+
+
+  </div>
+</ng-container>
