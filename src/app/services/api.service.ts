@@ -269,9 +269,7 @@ getAllCeremonyDetails(){
   return this.http.get('http://localhost:3000/clientceremonydetails')
 } 
 
-
-// deleteClient(id:any):Observable<any>{
-//   return this.http.delete(`http://localhost:3000/clients/${id}`)
-// }
-
-  }
+deleteproduct(id:any){
+  return this.http.delete('http://localhost:3000/products/'+id)
+}
+  } 

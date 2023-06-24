@@ -4,9 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { BdayComponent } from './bday/bday.component';
-import { CeremonyComponent } from './ceremony/ceremony.component';
-import { NewbornComponent } from './newborn/newborn.component';
+import { BdayComponent } from './wedding/bday.component';
+import { CeremonyComponent } from './social/ceremony.component';
+import { NewbornComponent } from './coporate/newborn.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
@@ -21,7 +21,6 @@ import { AddItemsComponent } from './add-items/add-items.component';
 import { EditItemsComponent } from './edit-items/edit-items.component';
 import { NewbornItemsComponent } from './newborn-items/newborn-items.component';
 import { NewbornAddItemsComponent } from './newborn-add-items/newborn-add-items.component';
-import { NewbornEditItemsComponent } from './newborn-edit-items/newborn-edit-items.component';
 import { CeremonyItemsComponent } from './ceremony-items/ceremony-items.component';
 import { CeremonyAddItemsComponent } from './ceremony-add-items/ceremony-add-items.component';
 import { CeremonyEditItemsComponent } from './ceremony-edit-items/ceremony-edit-items.component';
@@ -44,6 +43,9 @@ import { CeremonysearchPipe } from './pipes/ceremonysearch.pipe';
 import { ClientdetaildeleteConfirmComponent } from './clientdetaildelete-confirm/clientdetaildelete-confirm.component';
 import { EventComponent } from './event/event.component';
 import { AboutComponent } from './about/about.component';
+import { NavbartwoComponent } from './navbartwo/navbartwo.component';
+
+
 
 @NgModule({
   declarations: [
@@ -64,7 +66,7 @@ import { AboutComponent } from './about/about.component';
     EditItemsComponent,
     NewbornItemsComponent,
     NewbornAddItemsComponent,
-    NewbornEditItemsComponent,
+    
     CeremonyItemsComponent,
     CeremonyAddItemsComponent,
     CeremonyEditItemsComponent,
@@ -86,7 +88,10 @@ import { AboutComponent } from './about/about.component';
     CeremonysearchPipe,
     ClientdetaildeleteConfirmComponent,
     EventComponent,
-    AboutComponent
+    AboutComponent,
+    NavbartwoComponent,
+
+   
   ],
   imports: [
     BrowserModule,

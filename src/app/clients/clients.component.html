@@ -53,9 +53,9 @@
           <td>{{detail.address}}</td>
           <td>{{detail.event}}</td>
           <td>{{detail.packag}}</td>
-          <!-- <td><button style="background-color: white;border: none;" (click)="deletecli(detail.id)">
-            <i class="fa-solid fa-trash"></i> </button></td>  -->
-        </tr>
+          <!-- <td><button style="background-color: white;border: none;" routerLink="/deleteevent" >
+            <i class="fa-solid fa-trash"></i> </button></td> 
+        </tr> -->
 
 
         <tr *ngFor="let detailss of clientss | clients: searchkey: 'username' ; " class="text-center">

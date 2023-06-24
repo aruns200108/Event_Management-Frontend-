@@ -1,0 +1,11 @@
+.social li{
+    display: flex;
+    flex-direction: column;
+    float: left;
+    display: inline;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin-left: 20px;
+}
